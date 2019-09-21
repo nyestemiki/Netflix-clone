@@ -1,1 +1,1 @@
-# Netflix clone with React
+# Netflix Clone with React
