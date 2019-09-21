@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import NavbarStyles, { PrimaryNav, SecondaryNav, NavLink } from './styles/NavStyles';
+import NavbarStyles, { PrimaryNav, SecondaryNav, Logo, NavLink, NavItem, Search, Bell, Account } from './styles/NavStyles';
 
 export default class Navbar extends Component {
     render() {
         return (
             <NavbarStyles>
                 <PrimaryNav>
-                    <NavLink>Netflix</NavLink>
+                    <Logo />
                     <NavLink focus={true}>Home</NavLink>
                     <NavLink>TV Shows</NavLink>
                     <NavLink>Movies</NavLink>
@@ -14,10 +14,10 @@ export default class Navbar extends Component {
                     <NavLink>My List</NavLink>
                 </PrimaryNav>
                 <SecondaryNav>
-                    <NavLink>Search</NavLink>
-                    <NavLink>KIDS</NavLink>
-                    <NavLink>bell</NavLink>
-                    <NavLink>accounts</NavLink>
+                    <Search />
+                    <NavItem>KIDS</NavItem>
+                    <Bell />
+                    <Account />
                 </SecondaryNav>
             </NavbarStyles>
         )

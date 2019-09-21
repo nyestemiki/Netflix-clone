@@ -3,11 +3,13 @@ import styled from 'styled-components';
 
 const NavbarStyle = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     width: 100vw;
     padding: 20px 40px;
     font-size: 12px;
     line-height: 16.8px;
+    letter-spacing: 0.62px;
+    font-weight: 500;
 `;
 
 const PrimaryNav = styled.div`
@@ -16,12 +18,25 @@ const PrimaryNav = styled.div`
 
 const SecondaryNav = styled.div`
     justify-self: end;
+    
     display: flex;
-    color: white;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+`;
+
+const Logo = styled.div`
+    position: relative;
+    top: -3.5px;
+    background: url('/imgs/logo.png') center no-repeat;
+    background-size: cover;
+    width: 100px;
+    margin-right: 20px;
 `;
 
 const NavLink = styled.div`
-    margin: 5px;
+    margin: 8px;
     cursor: pointer;
     will-change: color;
     transition: color .5s;
@@ -32,5 +47,33 @@ const NavLink = styled.div`
     }
 `;
 
+const NavItem = styled.div`
+    margin: 8px 25px;
+    cursor: pointer;
+    color: white;  
+`;
+
+const Search = styled.div`
+    background: url('/imgs/search.png') center no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+`;
+
+const Bell = styled.div`
+    background: url('/imgs/bell.png') center no-repeat;
+    background-size: cover;
+    margin-right: 30px;
+    width: 25px;
+    height: 25px;
+`;
+
+const Account = styled.div`
+    background: url('/imgs/account.png') center no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+`;
+
 export default NavbarStyle;
-export { PrimaryNav, SecondaryNav, NavLink };
+export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, Search, Bell, Account };
