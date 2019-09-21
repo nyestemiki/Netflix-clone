@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const NavbarStyle = styled.div`
+    position: fixed;
+    z-index: 1000;
     display: grid;
     grid-template-columns: 2fr 1fr;
     width: 100vw;
@@ -10,6 +12,7 @@ const NavbarStyle = styled.div`
     line-height: 16.8px;
     letter-spacing: 0.62px;
     font-weight: 500;
+    background: ${props => props.scrolled ? 'black' : 'transparent'};
 `;
 
 const PrimaryNav = styled.div`
@@ -33,6 +36,7 @@ const Logo = styled.div`
     background-size: cover;
     width: 100px;
     margin-right: 20px;
+    cursor: pointer;
 `;
 
 const NavLink = styled.div`

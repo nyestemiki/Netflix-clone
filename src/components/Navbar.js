@@ -2,9 +2,23 @@ import React, { Component } from 'react'
 import NavbarStyles, { PrimaryNav, SecondaryNav, Logo, NavLink, NavItem, Search, Bell, Account } from './styles/NavStyles';
 
 export default class Navbar extends Component {
+    state = {
+        scrolled: false
+    }
+
+    handleScroll = () => {
+        this.setState({ scrolled: window.pageYOffset ? true : false });
+    }
+
+    componentDidMount() {
+
+        // Listening for scrolls
+        document.addEventListener('scroll', this.handleScroll);
+    }
+
     render() {
         return (
-            <NavbarStyles>
+            <NavbarStyles scrolled={this.state.scrolled}>
                 <PrimaryNav>
                     <Logo />
                     <NavLink focus={true}>Home</NavLink>
