@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const NavbarStyle = styled.div`
-    position: fixed;
+    position: absolute fixed;
     z-index: 1000;
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -10,7 +10,6 @@ const NavbarStyle = styled.div`
     padding: 20px 40px;
     font-size: 12px;
     line-height: 16.8px;
-    letter-spacing: 0.62px;
     font-weight: 500;
     background: ${props => props.scrolled ? 'black' : 'transparent'};
 `;
