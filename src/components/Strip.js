@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-import { StripTitle } from './styles/StripStyles';
+import { StripTitle, StripItems } from './styles/StripStyles';
+import StripItem from './StripItem';
 
 export default class Strip extends Component {
-    state = {
-
-    }
-
-    componentDidMount() {
-        // Load data into state
-    }
-
     render() {
         return (
             <>
                 <StripTitle>{this.props.title}</StripTitle>
+                <StripItems>
+                    <StripItem />
+                </StripItems>
             </>
         )
     }
