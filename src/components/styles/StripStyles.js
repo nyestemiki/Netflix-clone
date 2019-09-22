@@ -51,6 +51,8 @@ const StripItems = styled.div`
     grid-template-columns: repeat(6, 1fr);
     position: relative;
     grid-gap: 5px;
+    overflow: hidden;
+    margin-bottom: 60px;
     
     img {
         width: 296px;

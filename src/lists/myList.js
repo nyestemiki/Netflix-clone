@@ -1,6 +1,8 @@
 const myList = [
     'brave',
-    'thor'
+    'thor',
+    'extinction',
+    'worldWarZ'
 ]
 
 export default myList;

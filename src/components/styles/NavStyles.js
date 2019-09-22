@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const NavbarStyle = styled.div`
-    position: absolute fixed;
+    position: fixed;
+    top: 0;
     z-index: 1000;
     display: grid;
     grid-template-columns: 2fr 1fr;

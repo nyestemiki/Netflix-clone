@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-const StripeContainer = styled.div`
-    margin: 20px 50px;
+const StripContainer = styled.div`
+    margin-top: 200px;
 `;
 
-export default StripeContainer;
+export default StripContainer;
