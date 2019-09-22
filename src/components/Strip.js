@@ -8,7 +8,7 @@ export default class Strip extends Component {
             <>
                 <StripTitle>{this.props.title}</StripTitle>
                 <StripItems>
-                    <StripItem />
+                    {(this.props.films).map(film => <StripItem film={film} key={film}/>)}
                 </StripItems>
             </>
         )

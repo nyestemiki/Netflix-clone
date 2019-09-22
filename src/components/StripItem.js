@@ -5,7 +5,10 @@ export default class StripItem extends Component {
     render() {
         return (
             <ItemStyle>
-                I am a strip item
+                <img 
+                    src={"/imgs/covers/" + this.props.film + ".jpg"}
+                    alt={this.props.film}    
+                />
             </ItemStyle>
         )
     }

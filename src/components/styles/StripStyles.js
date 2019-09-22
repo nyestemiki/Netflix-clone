@@ -48,17 +48,30 @@ const StripTitle = styled.div`
 
 const StripItems = styled.div`
     display: grid;
-    grid-auto-columns: repeat(6, minmax(150px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     position: relative;
+    grid-gap: 5px;
     
-    /* &:after {
+    img {
+        width: 296px;
+        height: 167px;
+    }
+    
+    /* 
+    Progress bar
+    &:before {
+
+    } 
+    Next strip-fragment
+    &:after {
         display: inline-block;
         content: '>';
-    } */
+    } 
+    */
 `;
 
 const ItemStyle = styled.div`
-    display: inline-block;
+    display: inline;
 `;
 
 export { StripTitle, StripItems, ItemStyle };
