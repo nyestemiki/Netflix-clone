@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import NavbarStyles, { PrimaryNav, SecondaryNav, Logo, NavLink, NavItem, Search, Bell, Account } from './styles/NavStyles';
+import NavbarStyles, { PrimaryNav, SecondaryNav, Logo, NavLink, NavItem, Search, Bell } from './styles/NavStyles';
+import AccountManager from './AccountManager';
 
 export default class Navbar extends Component {
     state = {
@@ -31,7 +32,7 @@ export default class Navbar extends Component {
                     <Search />
                     <NavItem>KIDS</NavItem>
                     <Bell />
-                    <Account />
+                    <AccountManager />
                 </SecondaryNav>
             </NavbarStyles>
         )

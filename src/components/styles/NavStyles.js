@@ -71,12 +71,29 @@ const Bell = styled.div`
     height: 25px;
 `;
 
-const Account = styled.div`
+const AccountStyle = styled.div`
     background: url('/imgs/account.png') center no-repeat;
     background-size: cover;
     width: 30px;
     height: 30px;
+    position: relative;
+
+    &:after {
+        display: block;
+        content: '';
+        width: 0px;
+        position: absolute;
+        right: 0;
+    }
+
+    &:hover {
+        &:after {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    }
 `;
 
 export default NavbarStyle;
-export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, Search, Bell, Account };
+export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, Search, Bell, AccountStyle };
