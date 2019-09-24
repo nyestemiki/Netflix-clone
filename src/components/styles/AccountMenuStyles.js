@@ -21,6 +21,7 @@ const AccountMenuContainer = styled.div`
         );
         width: 10px;
         height: 10px;
+        
         position: absolute;
         right: 10px;
         top: -5px;
