@@ -61,6 +61,7 @@ const Search = styled.div`
     background-size: cover;
     width: 20px;
     height: 20px;
+    cursor: pointer;
 `;
 
 const Bell = styled.div`
@@ -69,31 +70,17 @@ const Bell = styled.div`
     margin-right: 30px;
     width: 25px;
     height: 25px;
+    cursor: pointer;
 `;
 
-const AccountStyle = styled.div`
+const AccountIcon = styled.div`
     background: url('/imgs/account.png') center no-repeat;
     background-size: cover;
     width: 30px;
     height: 30px;
     position: relative;
-
-    &:after {
-        display: block;
-        content: '';
-        width: 0px;
-        position: absolute;
-        right: 0;
-    }
-
-    &:hover {
-        &:after {
-            width: 100px;
-            height: 100px;
-            border: 1px solid red;
-        }
-    }
+    cursor: pointer;
 `;
 
 export default NavbarStyle;
-export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, Search, Bell, AccountStyle };
+export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, Search, Bell, AccountIcon };
