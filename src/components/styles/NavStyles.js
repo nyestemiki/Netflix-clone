@@ -11,6 +11,7 @@ const NavbarStyle = styled.div`
     font-size: 12px;
     line-height: 16.8px;
     font-weight: 500;
+    transition: all .75s;
     background: ${props => props.scrolled ? 'black' : 'transparent'};
 `;
 
@@ -74,7 +75,7 @@ const Bell = styled.div`
 `;
 
 const AccountIcon = styled.div`
-    background: url('/imgs/account.png') center no-repeat;
+    background: url('/imgs/accounts/account.png') center no-repeat;
     background-size: cover;
     width: 30px;
     height: 30px;
