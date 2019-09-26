@@ -33,7 +33,6 @@ const SearchDiv = styled.div`
 
 export default class Search extends Component {
     checkClick = event => {
-        console.log(event);
         if (!event.target.classList.contains('search')) {
             this.props.closeSearch();
         }

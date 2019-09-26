@@ -8,7 +8,7 @@ const NavbarStyle = styled.div`
     display: grid;
     grid-template-columns: 2fr 1fr;
     width: 100vw;
-    padding: 20px 40px;
+    padding: 7.5px 40px;
     font-size: 12px;
     line-height: 16.8px;
     font-weight: 500;
@@ -58,15 +58,6 @@ const NavItem = styled.div`
     color: white;  
 `;
 
-const Bell = styled.div`
-    background: url('/imgs/bell.png') center no-repeat;
-    background-size: cover;
-    margin-right: 30px;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-`;
-
 const AccountIcon = styled.div`
     background: url('/imgs/accounts/account.png') center no-repeat;
     background-size: cover;
@@ -96,4 +87,4 @@ const AccountIcon = styled.div`
 `;
 
 export default NavbarStyle;
-export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, Bell, AccountIcon };
+export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, AccountIcon };

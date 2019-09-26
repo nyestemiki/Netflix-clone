@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import NavbarStyles, { PrimaryNav, SecondaryNav, Logo, NavLink, NavItem, Bell } from './styles/NavStyles';
+import NavbarStyles, { PrimaryNav, SecondaryNav, Logo, NavLink, NavItem } from './styles/NavStyles';
 import AccountManager from './AccountManager';
 import Search from './Search';
+import Notifications from './Notifications';
 
 export default class Navbar extends Component {
     state = {
@@ -44,7 +45,7 @@ export default class Navbar extends Component {
                         closeSearch={this.closeSearch}
                     />
                     <NavItem>KIDS</NavItem>
-                    <Bell />
+                    <Notifications />
                     <AccountManager />
                 </SecondaryNav>
             </NavbarStyles>
