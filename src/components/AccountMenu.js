@@ -17,7 +17,7 @@ export default class AccountMenu extends Component {
             accountMenuDiv.addEventListener('mouseleave', () => {
                 setTimeout(() => {
                     this.setState({ show: false });
-                }, 1000);
+                }, 300);
             });
         }
     }

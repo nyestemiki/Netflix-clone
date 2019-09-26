@@ -8,7 +8,7 @@ const NavbarStyle = styled.div`
     display: grid;
     grid-template-columns: 2fr 1fr;
     width: 100vw;
-    padding: 7.5px 40px;
+    padding: 7.5px 50px;
     font-size: 12px;
     line-height: 16.8px;
     font-weight: 500;
