@@ -1,18 +1,27 @@
 import React, { Component } from 'react'
-import NavbarStyles, { PrimaryNav, SecondaryNav, Logo, NavLink, NavItem, Search, Bell } from './styles/NavStyles';
+import NavbarStyles, { PrimaryNav, SecondaryNav, Logo, NavLink, NavItem, Bell } from './styles/NavStyles';
 import AccountManager from './AccountManager';
+import Search from './Search';
 
 export default class Navbar extends Component {
     state = {
-        scrolled: false
+        scrolled: false,
+        searchOpen: false
     }
 
     handleScroll = () => {
         this.setState({ scrolled: window.pageYOffset ? true : false });
     }
 
-    componentDidMount() {
+    openSearch = () => {
+        this.setState({ searchOpen: true });
+    }
 
+    closeSearch = () => {
+        this.setState({ searchOpen: false });
+    }
+
+    componentDidMount() {
         // Listening for scrolls
         document.addEventListener('scroll', this.handleScroll);
     }
@@ -29,7 +38,11 @@ export default class Navbar extends Component {
                     <NavLink>My List</NavLink>
                 </PrimaryNav>
                 <SecondaryNav>
-                    <Search />
+                    <Search 
+                        open={this.state.searchOpen}
+                        openSearch={this.openSearch}
+                        closeSearch={this.closeSearch}
+                    />
                     <NavItem>KIDS</NavItem>
                     <Bell />
                     <AccountManager />

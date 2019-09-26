@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const NavbarStyle = styled.div`
     position: fixed;
+    box-sizing: border-box;
     top: 0;
     z-index: 1000;
     display: grid;
@@ -57,14 +58,6 @@ const NavItem = styled.div`
     color: white;  
 `;
 
-const Search = styled.div`
-    background: url('/imgs/search.png') center no-repeat;
-    background-size: cover;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-`;
-
 const Bell = styled.div`
     background: url('/imgs/bell.png') center no-repeat;
     background-size: cover;
@@ -81,7 +74,26 @@ const AccountIcon = styled.div`
     height: 30px;
     position: relative;
     cursor: pointer;
+    position: relative;
+
+    &:after { 
+        display: block;
+        content: '';
+        transform: rotateZ(45deg);
+        background: linear-gradient(
+            135deg, 
+            transparent 0%, 
+            transparent 50%, 
+            white 50%, 
+            white 100%
+        );
+        width: 7px;
+        height: 7px;
+        position: absolute;
+        right: -15px;
+        top: 10px;
+    }
 `;
 
 export default NavbarStyle;
-export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, Search, Bell, AccountIcon };
+export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, Bell, AccountIcon };
