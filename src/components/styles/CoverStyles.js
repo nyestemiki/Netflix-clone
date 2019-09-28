@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const CoverStyle = styled.div`
     width: 100vw;
@@ -13,7 +13,7 @@ const CoverStyle = styled.div`
 const Trailer = styled.video`
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 100%; 
     position: absolute;
 `;
 
@@ -23,18 +23,62 @@ const Content = styled.div`
     padding: 35px;
     display: flex;
     flex-direction: column;
-    
-    & > * {
+    justify-content: flex-end;
+    height: 30vh;
+
+    & > * { 
         margin-bottom: 20px; 
     }
 `;
 
-const Title = styled.div`
-    font-size: 3rem;
+const TitleAnimationFwd = keyframes`
+    from {
+        transform: translateY(100%);
+    } to {
+        transform: translateY(0);
+    }
 `;
 
+const TitleAnimationBwd = keyframes`
+    from {
+        transform: translateY(0);
+    } to {
+        transform: translateY(1%);
+    }
+`;
+
+const Title = styled.div`
+    font-size: 3rem; 
+    /* animation: ${props => props.showDescription ? TitleAnimationFwd : TitleAnimationBwd};
+    animation-duration: .6s; */
+`;
+
+const DescriptionAnimationFwd = keyframes`
+    from {
+        /* transform: translateY(100%); */
+    } to {
+        /* transform: translateY(0); */
+        height: 0;
+    }
+`; 
+
+const DescriptionAnimationBwd = keyframes`
+    from {
+        /* transform: translateY(0); */
+        height: auto;
+    } to {
+        /* transform: translateY(100%); */
+        height: 0vh;
+    }
+`; 
+ 
 const Description = styled.div`
+    animation: ${props => props.show ? '' : DescriptionAnimationBwd};
+    animation-duration: 1s;
+    /* display: ${props => props.show ? 'block' : 'none'}; */
+    transition: all 1s;
     width: 50vw;
+    overflow: hidden; 
 `;
 
 const Buttons = styled.div`
