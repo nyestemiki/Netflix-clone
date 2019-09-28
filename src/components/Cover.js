@@ -19,7 +19,7 @@ export default class Cover extends Component {
                         <Button><Circle>i</Circle> More Info</Button>
                     </Buttons>
                 </Content>
-                <Replay />
+                <Replay /> {/* Replay button */}
                 <AgeRestricion>13+</AgeRestricion>
             </CoverStyle>
         )
