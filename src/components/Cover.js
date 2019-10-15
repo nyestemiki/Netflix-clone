@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import CoverStyle, { Trailer, Content, Title, Description, Buttons, Button, Plus, Circle, Replay, AgeRestricion } from './styles/CoverStyles';
+import CoverStyle, { Trailer, Content, Title, Description, Buttons, Button, Plus, Circle, VideoManipulation, Arrow, Mute, AgeRestricion } from './styles/CoverStyles';
 
 export default class Cover extends Component {
     state = {
         videoPlaying: true,
+        videoMuted: false,
         myList: false
     }
 
@@ -20,6 +21,12 @@ export default class Cover extends Component {
             video.play();
             this.setState({ videoPlaying: true });
         }
+    }
+
+    mute = () => {
+        const video = document.getElementById('video');
+        video.muted = !video.muted;
+        this.setState({ videoMuted: !this.state.videoMuted });
     }
 
     myList = () => {
@@ -46,8 +53,11 @@ export default class Cover extends Component {
                         <Button><Circle className="circle">i</Circle> More Info</Button>
                     </Buttons>
                 </Content>
-                <Replay /> {/* Replay button */}
-                <AgeRestricion>13+</AgeRestricion>
+                <VideoManipulation>
+                    {!this.state.videoPlaying && <Arrow onClick={this.rePlay}/>}
+                    {this.state.videoPlaying && <Mute mute={this.state.videoMuted} onClick={this.mute}/>}
+                </VideoManipulation>
+                <AgeRestricion>16+</AgeRestricion>
             </CoverStyle>
         )
     }
