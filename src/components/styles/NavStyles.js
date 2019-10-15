@@ -27,7 +27,7 @@ const NavbarStyle = styled.div`
         display: block;
         content: '';
         left: -50px;
-        background: ${props => props.scrolled ? 'black' : 'transparent'};
+        background: ${props => props.scrolled ? '#141414' : 'transparent'};
     }
 `;
 

@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Strips from './Strips';
 import Cover from './Cover';
 import AppStyle from './styles/AppStyles';
+import Footer from './Footer';
 
 class App extends React.Component {
 	render() {
@@ -11,6 +12,7 @@ class App extends React.Component {
 				<Navbar />
 				<Cover />
 				<Strips />
+				<Footer />
 			</AppStyle>
 		);
 	}
