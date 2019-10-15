@@ -74,6 +74,19 @@ const StripItems = styled.div`
 
 const ItemStyle = styled.div`
     display: inline;
+
+    &:after {
+        display: block;
+        content: '';
+        position: relative;
+        margin-top: 10px;
+        /* width: ${props => props.progress ? `${props.progress+95}px` : '0'}; */
+        width: 196px;
+        left: 50px;
+        height: 3px;
+        z-index: 100;
+        background: ${props => props.progress ? `linear-gradient(to right, red 0%, red ${props.progress}%, rgba(255, 255, 255, 0.3) ${props.progress}%, rgba(255, 255, 255, 0.3) 100%)` : 'none'};
+    }
 `;
 
 export { Arrow, StripTitle, StripItems, ItemStyle };

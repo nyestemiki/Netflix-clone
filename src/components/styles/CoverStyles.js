@@ -54,14 +54,14 @@ const Title = styled.div`
     animation-duration: .6s; */
 `;
 
-const DescriptionAnimationFwd = keyframes`
-    from {
-        /* transform: translateY(100%); */
-    } to {
-        /* transform: translateY(0); */
-        height: 0;
-    }
-`; 
+// const DescriptionAnimationFwd = keyframes`
+//     from {
+//         /* transform: translateY(100%); */
+//     } to {
+//         /* transform: translateY(0); */
+//         height: 0;
+//     }
+// `; 
 
 const DescriptionAnimationBwd = keyframes`
     from {

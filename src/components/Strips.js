@@ -12,10 +12,26 @@ export default class Strips extends Component {
     render() {
         return (
             <StripContainer>
-                <Strip title="My List" films={myList}/>    
-                <Strip title="Continue Watching for John" films={continueWatching}/>    
-                <Strip title="Trending Now" films={trendingNow}/>    
-                <Strip title="Because you added Thor to your list" films={becauseThor}/>    
+                <Strip 
+                    title="My List" 
+                    films={myList} 
+                    list="myList"
+                />    
+                <Strip 
+                    title="Continue Watching for John" 
+                    films={continueWatching} 
+                    list="continueWatching"
+                />    
+                <Strip 
+                    title="Trending Now" 
+                    films={trendingNow} 
+                    list="trendingNow"
+                />    
+                <Strip 
+                    title="Because you added Thor to your list" 
+                    films={becauseThor} 
+                    list="becauseThor"
+                />    
             </StripContainer>
         )
     }

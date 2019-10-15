@@ -5,7 +5,7 @@ import Shows from '../Shows';
 export default class StripItem extends Component {
     render() {
         return (
-            <ItemStyle>
+            <ItemStyle progress={this.props.progress}>
                 <img 
                     src={Shows[this.props.film].cover}
                     alt={this.props.film}    

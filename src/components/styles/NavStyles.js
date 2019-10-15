@@ -13,7 +13,22 @@ const NavbarStyle = styled.div`
     line-height: 16.8px;
     font-weight: 500;
     transition: all .75s;
-    background: ${props => props.scrolled ? 'black' : 'transparent'};
+
+    & > * {
+        z-index: 1000;
+    }
+    
+    &:before {
+        transition: all .75s;
+        z-index: 0;
+        position: absolute;
+        width: 100vw;
+        height: 60px;
+        display: block;
+        content: '';
+        left: -50px;
+        background: ${props => props.scrolled ? 'black' : 'transparent'};
+    }
 `;
 
 const PrimaryNav = styled.div`

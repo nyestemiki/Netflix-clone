@@ -3,17 +3,15 @@
 
 #### To do
 
-1. Progressline on "Continue Watching"
+1. Footer
 
-2. Footer
+2. Finish cover
 
-3. Finish cover
-
-4. Hover on films
+3. Hover on films
 
 
-5. Sliding strips
+4. Sliding strips
 
-6. Responsive design
+5. Responsive design
 
-7. Videos and images stored online
+6. Videos and images stored online

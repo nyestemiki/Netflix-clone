@@ -8,7 +8,13 @@ export default class Strip extends Component {
             <>
                 <StripTitle><Arrow>{this.props.title}</Arrow></StripTitle>
                 <StripItems>
-                    {(this.props.films).map(film => <StripItem film={film} key={film}/>)}
+                    {(this.props.films).map(film => 
+                        <StripItem 
+                            film={film} 
+                            key={film}
+                            progress={this.props.list === "continueWatching" ? `${Math.random() * (100 - 20) + 20}` : 0}
+                        />
+                    )}
                 </StripItems>
             </>
         )
