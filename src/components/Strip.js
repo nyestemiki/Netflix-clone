@@ -11,7 +11,7 @@ export default class Strip extends Component {
                     {(this.props.films).map(film => 
                         <StripItem 
                             film={film} 
-                            key={film}
+                            key={film + Math.random()}
                             progress={this.props.list === "continueWatching" ? `${Math.random() * (100 - 20) + 20}` : 0}
                         />
                     )}

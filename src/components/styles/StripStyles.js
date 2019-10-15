@@ -50,7 +50,7 @@ const StripItems = styled.div`
     display: flex;
     position: relative;
     
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-bottom: 60px;
     
     img {
@@ -58,22 +58,11 @@ const StripItems = styled.div`
         height: 167px;
         margin: 0 2px;
     }
-    
-    /* 
-    Progress bar
-    &:before {
-
-    } 
-    Next strip-fragment
-    &:after {
-        display: inline-block;
-        content: '>';
-    } 
-    */
 `;
 
 const ItemStyle = styled.div`
     display: inline;
+    transition: all .7s;
 
     &:after {
         display: block;
@@ -87,6 +76,119 @@ const ItemStyle = styled.div`
         z-index: 100;
         background: ${props => props.progress ? `linear-gradient(to right, red 0%, red ${props.progress}%, rgba(255, 255, 255, 0.3) ${props.progress}%, rgba(255, 255, 255, 0.3) 100%)` : 'none'};
     }
+
+    &:hover {
+        transform: scale(1.8);
+        margin: 0 40px;
+    }
 `;
 
-export { Arrow, StripTitle, StripItems, ItemStyle };
+const Info = styled.div`
+    position: absolute;
+    top: 0;
+    width: 296px;
+    height: 167px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 10px;
+`;
+
+const HeaderAndBtns = styled.div`
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+`;
+
+const Left = styled.div`
+    padding: 10px;
+
+    &:hover {
+        .play {
+            color: red;
+        }
+    }
+`;
+
+const Button = styled.div`
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    border: 1px solid rgba(255, 255, 255, .7);
+    margin: 2px 0;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    font-size: 8px;
+    transition: all .5s;
+
+    &:hover {
+        transform: scale(1.1);
+        border-color: white;
+    }
+`;
+
+const Buttons = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const Text = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        margin: 3.5px;
+    }
+`;
+
+const Title = styled.div`
+    font-weight: bold;
+    color: white;
+`;
+
+const MatchAgeDuration = styled.div`
+    display: flex;
+    
+    & > * {
+        margin-right: 10px;
+    }
+`;
+
+const Match = styled.div`
+    color: lightgreen;
+`;
+
+const Age = styled.div`
+    font-size: 8px;
+    top: -2px;
+    padding: 1px 2px;
+    border: 1px solid rgba(255, 255, 255, .7);
+`;
+
+const Duration = styled.div`
+    
+`;
+
+const Tags = styled.div`
+    
+`;
+
+const MoreInfoArrow = styled.div`
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: white transparent transparent transparent;
+    align-self: center;
+    margin: 5px;
+
+    &:hover {
+        border-color: red transparent transparent transparent;
+    }
+`;
+
+export { Arrow, StripTitle, StripItems, ItemStyle, Info, HeaderAndBtns, Left, Button, Buttons, Text, Age, MatchAgeDuration, Match, Duration, Title, Tags, MoreInfoArrow };
