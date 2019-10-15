@@ -3,7 +3,8 @@ import CoverStyle, { Trailer, Content, Title, Description, Buttons, Button, Plus
 
 export default class Cover extends Component {
     state = {
-        videoPlaying: true
+        videoPlaying: true,
+        myList: false
     }
 
     componentDidMount() {
@@ -11,6 +12,18 @@ export default class Cover extends Component {
         document.getElementById('video').addEventListener('ended', () => {
             this.setState({ videoPlaying: false });
         });
+    }
+
+    rePlay = () => {
+        const video = document.getElementById('video');
+        if (!video.playing) {
+            video.play();
+            this.setState({ videoPlaying: true });
+        }
+    }
+
+    myList = () => {
+        this.setState({ myList: !this.state.myList });
     }
 
     render() {
@@ -25,9 +38,12 @@ export default class Cover extends Component {
                         Three zeros try to become heroes when gunmen take hostages at a star-studded party inside a fancy Los Angeles hotel.
                     </Description>
                     <Buttons>
-                        <Button>&#9658; Play</Button>
-                        <Button><Plus>&#43;</Plus> My List</Button>
-                        <Button><Circle>i</Circle> More Info</Button>
+                        <Button onClick={this.rePlay}>&#9658; Play</Button>
+                        <Button onClick={this.myList}>
+                            <Plus>{this.state.myList ? '✔' : '+'}</Plus> 
+                            My List
+                        </Button>
+                        <Button><Circle className="circle">i</Circle> More Info</Button>
                     </Buttons>
                 </Content>
                 <Replay /> {/* Replay button */}

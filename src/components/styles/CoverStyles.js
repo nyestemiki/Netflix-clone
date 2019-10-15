@@ -19,16 +19,15 @@ const Trailer = styled.video`
 `;
 
 const Content = styled.div`
-    top: 150px;
-    position: relative;
+    position: absolute;
     padding: 35px 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    height: 30vh;
+    justify-content: center;
+    height: 100%;
 
     & > * { 
-        margin-bottom: 20px; 
+        margin-bottom: 40px; 
     }
 `;
 
@@ -54,31 +53,28 @@ const Title = styled.div`
     animation-duration: .6s; */
 `;
 
-// const DescriptionAnimationFwd = keyframes`
-//     from {
-//         /* transform: translateY(100%); */
-//     } to {
-//         /* transform: translateY(0); */
-//         height: 0;
-//     }
-// `; 
+const DescriptionAnimationFwd = keyframes`
+    from {
+        height: auto;
+    } to {
+        height: 0;
+    }
+`; 
 
 const DescriptionAnimationBwd = keyframes`
     from {
-        /* transform: translateY(0); */
-        height: auto;
+        height: 0;
     } to {
-        /* transform: translateY(100%); */
-        height: 0vh;
+        height: auto;
     }
 `; 
  
 const Description = styled.div`
-    animation: ${props => props.show ? '' : DescriptionAnimationBwd};
+    animation: ${props => props.show ? DescriptionAnimationBwd : DescriptionAnimationFwd};
     animation-duration: 1s;
-    /* display: ${props => props.show ? 'block' : 'none'}; */
+    display: ${props => props.show ? 'block' : 'none'};
     transition: all 1s;
-    width: 50vw;
+    width: 30vw;
     overflow: hidden; 
 `;
 
@@ -91,16 +87,24 @@ const Button = styled.div`
     backdrop-filter: blur(10px);
     margin-right: 15px;
     padding: 10px 30px;
-    border-radius: 2px;
+    border-radius: 4px;
+    transition: transform .35s;
+    cursor: pointer;
 
     &:hover {
-
+        color: rgba(0, 0, 0, .85);
+        background-color: rgba(255, 255, 255, .85);
+        transform: scale(1.1);
+        .circle {
+            border: 1px solid rgba(0, 0, 0, .85);
+        }
     }
 `;
 
 const Plus = styled.div`
     font-weight: bold;
     display: inline-block;
+    padding: 0 5px;
 `;
 
 const Circle = styled.span`

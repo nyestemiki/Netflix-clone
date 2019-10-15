@@ -26,7 +26,7 @@ export default class Footer extends Component {
                     <div>Contact Us</div>
                 </Links>
                 <ServiceCode>Service Code</ServiceCode>
-                <CC>© 1997-2019 Netflix, Inc. {"{i-0c4517dea3b7e884f}"}</CC>
+                <CC>© 1997-2019 Netflix, Inc. {"{i-0c4517dea3b7e884f}"} Nyeste Miki Edition :)</CC>
             </FooterStyle>
         )
     }
