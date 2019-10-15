@@ -22,7 +22,7 @@ export default class StripItem extends Component {
                     <Info>
                         <HeaderAndBtns>
                             <Left>
-                                <Button className="play">▶</Button>
+                                <Button className="play"><span>▶</span></Button>
                                 <Text>
                                     <Title>Title</Title>
                                     <MatchAgeDuration>
@@ -34,8 +34,8 @@ export default class StripItem extends Component {
                                 </Text>
                             </Left>
                             <Buttons>
-                                <Button>👍</Button>
-                                <Button>👎</Button>
+                                <Button><span role="img" aria-label="like">👍</span></Button>
+                                <Button><span role="img" aria-label="dislike">👎</span></Button>
                                 <Button>+</Button>
                             </Buttons>
                         </HeaderAndBtns>
