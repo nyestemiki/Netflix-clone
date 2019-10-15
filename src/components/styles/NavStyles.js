@@ -7,8 +7,8 @@ const NavbarStyle = styled.div`
     z-index: 1000;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    width: 100vw;
-    padding: 7.5px 50px;
+    width: calc(100vw - 100px - 10px);
+    padding: 7.5px 0;
     font-size: 12px;
     line-height: 16.8px;
     font-weight: 500;
@@ -18,24 +18,23 @@ const NavbarStyle = styled.div`
 
 const PrimaryNav = styled.div`
     display: flex;
+    align-items: center;
 `;
 
 const SecondaryNav = styled.div`
-    justify-self: end;
-    
     display: flex;
     align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     justify-items: center;
 `;
 
 const Logo = styled.div`
     position: relative;
-    top: -3.5px;
-    background: url('/imgs/logo.png') center no-repeat;
-    background-size: cover;
+    background: url('/imgs/logo.png') no-repeat;
+    background-size: contain;
     width: 100px;
+    height: 30px;
     margin-right: 20px;
     cursor: pointer;
 `;
@@ -46,6 +45,7 @@ const NavLink = styled.div`
     will-change: color;
     transition: color .5s;
     color: ${props => props.focus ? 'white' : '#e5e5e5'};  
+    font-weight: ${props => props.focus ? 'bold' : ''};
 
     &:hover {
         color: #b3b3b3;

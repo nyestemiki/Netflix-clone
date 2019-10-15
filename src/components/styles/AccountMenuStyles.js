@@ -4,7 +4,7 @@ const AccountMenuContainer = styled.div`
     position: absolute;
     right: 0;
     top: 35px;
-    margin: 25px 40px;
+    margin: 25px 0;
     background: rgba(0, 0, 0, 0.9);
     z-index: 1000;
     color: white;

@@ -15,12 +15,13 @@ const Trailer = styled.video`
     width: 100%;
     height: 100%; 
     position: absolute;
+    left: -50px;
 `;
 
 const Content = styled.div`
     top: 150px;
     position: relative;
-    padding: 35px;
+    padding: 35px 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

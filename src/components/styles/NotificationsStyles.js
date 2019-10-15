@@ -4,7 +4,7 @@ const NotificationsContainer = styled.div`
     position: absolute;
     right: 0;
     top: 35px;
-    margin: 25px 100px;
+    margin: 25px 58px;
     background: rgba(0, 0, 0, 0.9);
     z-index: 1000;
     color: white;
