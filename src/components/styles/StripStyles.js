@@ -65,11 +65,10 @@ const ItemStyle = styled.div`
     transition: all .7s;
 
     &:after {
-        display: block;
+        display: inline;
         content: '';
         position: relative;
         margin-top: 10px;
-        /* width: ${props => props.progress ? `${props.progress+95}px` : '0'}; */
         width: 196px;
         left: 50px;
         height: 3px;

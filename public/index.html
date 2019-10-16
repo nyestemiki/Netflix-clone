@@ -3,10 +3,27 @@
   	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://unpkg.com/glider-js@1.6.0/glider.min.css" />
 		<title>Netflix</title>
   	</head>
   	<body>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
+		<script>
+			window.addEventListener('load', function(){
+				Array.from(document.querySelectorAll('.glider')).forEach(list => {
+					new Glider(list, {
+						slidesToShow: 3,
+						slidesToScroll: 2,
+						draggable: false,
+						dots: '.dots',
+						arrows: {
+							prev: '.glider-prev',
+							next: '.glider-next'
+						}
+					})
+				})
+			})
+		</script>
 	</body>
 </html>

@@ -1,10 +1,8 @@
 ### Netflix Clone with React
 
 
-#### To do
+#### To be implemented
 
-4. Sliding strips
+1. Sliding strips
 
-5. Responsive design
-
-6. Videos and images stored online
+2. Responsive design
