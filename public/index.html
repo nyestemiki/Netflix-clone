@@ -13,8 +13,8 @@
 			window.addEventListener('load', function(){
 				Array.from(document.querySelectorAll('.glider')).forEach(list => {
 					new Glider(list, {
-						slidesToShow: 3,
-						slidesToScroll: 2,
+						slidesToShow: Math.floor(window.innerWidth/300),
+						slidesToScroll: Math.floor(window.innerWidth/300),
 						draggable: false,
 						dots: '.dots',
 						arrows: {

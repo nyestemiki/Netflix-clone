@@ -63,9 +63,11 @@ const StripItems = styled.div`
 const ItemStyle = styled.div`
     display: inline;
     transition: all .7s;
+    position: relative;
+    z-index: 2000000;
 
     &:after {
-        display: inline;
+        display: inline-block;
         content: '';
         position: relative;
         margin-top: 10px;
@@ -77,16 +79,19 @@ const ItemStyle = styled.div`
     }
 
     &:hover {
-        transform: scale(1.8);
-        margin: 0 40px;
+        transform: scale(1.3);
+        z-index: 200000000;
+        margin-right: ${props => props.isLastInStrip ? '160' : ''}px;
+        margin-left: ${props => props.isFirstInStrip ? '160' : ''}px;
+        margin: 0px ${props => !(props.isFirstInStrip || props.isLastInStrip) ? '80' : ''}px;
     }
 `;
 
 const Info = styled.div`
     position: absolute;
     top: 0;
-    width: 296px;
-    height: 167px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

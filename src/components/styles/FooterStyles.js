@@ -11,7 +11,7 @@ const FooterStyle = styled.div`
     color: rgba(255, 255, 255, .3);
     font-size: 12px;
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1000px) {
         margin: 0;
         width: 100vw;
     }

@@ -17,3 +17,15 @@ html, body {
     width: 100%;
     height: 100%;
 }
+
+.glider {
+    overflow: hidden;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+
+.glider-track {
+    height: 70%;
+}

@@ -4,6 +4,7 @@ import StripItem from './StripItem';
 
 export default class Strip extends Component {
     render() {
+        let counter = 0;
         return (
             <>
                 <StripTitle><Arrow>{this.props.title}</Arrow></StripTitle>
@@ -11,15 +12,19 @@ export default class Strip extends Component {
                     <div className="glider" id={this.props.list}>
                         {(this.props.films).map(film => 
                             <StripItem 
-                                film={film} 
-                                key={film + Math.random()}
+                                film={film}
+                                number={this.props.list + counter} 
+                                firstInList={counter === 0}
+                                lastInList={counter === (this.props.films).length-1}
+                                key={film + counter++}
+                                nrItems={(this.props.films).length}
                                 progress={this.props.list === "continueWatching" ? `${Math.random() * (100 - 20) + 20}` : 0}
                             />
                         )}
                     </div>
-                    <button aria-label="Previous" class="glider-prev">«</button>
-                    <button aria-label="Next" class="glider-next">»</button>
-                    <div role="tablist" class="dots"></div>
+                    <button aria-label="Previous" className="glider-prev">«</button>
+                    <button aria-label="Next" className="glider-next">»</button>
+                    <div role="tablist" className="dots"></div>
                 </div>
             </>
         )
