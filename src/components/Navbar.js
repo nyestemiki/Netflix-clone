@@ -3,6 +3,7 @@ import NavbarStyles, { PrimaryNav, SecondaryNav, Logo, NavLink, NavItem } from '
 import AccountManager from './AccountManager';
 import Search from './Search';
 import Notifications from './Notifications';
+import PhoneMenu from './PhoneMenu';
 
 export default class Navbar extends Component {
     state = {
@@ -31,7 +32,8 @@ export default class Navbar extends Component {
         return (
             <NavbarStyles scrolled={this.state.scrolled}>
                 <PrimaryNav>
-                    <Logo />
+                    <PhoneMenu/>
+                    <Logo/>
                     <NavLink focus={true}>Home</NavLink>
                     <NavLink>TV Shows</NavLink>
                     <NavLink>Movies</NavLink>
@@ -43,6 +45,7 @@ export default class Navbar extends Component {
                         open={this.state.searchOpen}
                         openSearch={this.openSearch}
                         closeSearch={this.closeSearch}
+                        showAlways={true}
                     />
                     <NavItem>KIDS</NavItem>
                     <Notifications />

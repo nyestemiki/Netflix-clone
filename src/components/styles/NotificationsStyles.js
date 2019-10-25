@@ -41,5 +41,11 @@ const NotificationStyle = styled.div`
     padding: 10px;
 `;
 
+const NotificationsStyle = styled.div`
+    @media screen and (max-width: 700px) {
+        display: none;        
+    }
+`;
+
 export default NotificationsContainer;
-export { NotificationStyle };
+export { NotificationStyle, NotificationsStyle };

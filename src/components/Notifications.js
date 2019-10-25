@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import NotificationsContainer, { NotificationStyle } from './styles/NotificationsStyles';
+import NotificationsContainer, { NotificationStyle, NotificationsStyle } from './styles/NotificationsStyles';
 
 const Bell = styled.div`
     background: url('/imgs/bell.png') center no-repeat;
@@ -41,7 +41,7 @@ export default class Notifications extends Component {
 
     render() {
         return (
-            <>
+            <NotificationsStyle>
                 <Bell id="notificationsBell"/>
                 <NotificationsContainer 
                     show={this.state.onIcon || this.state.onContainer} 
@@ -51,7 +51,7 @@ export default class Notifications extends Component {
                         No new notifications
                     </NotificationStyle>
                 </NotificationsContainer>
-            </>
+            </NotificationsStyle>
         )
     }
 }

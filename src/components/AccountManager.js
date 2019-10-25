@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AccountMenu from './AccountMenu';
-import { AccountIcon } from './styles/NavStyles'; 
+import { AccountIcon, AccountManagerStyle } from './styles/NavStyles'; 
 
 export default class AccountManager extends Component {
     state = {
@@ -21,10 +21,10 @@ export default class AccountManager extends Component {
 
     render() {
         return (
-            <>
+            <AccountManagerStyle>
                 <AccountIcon id="account"/>
                 <AccountMenu show={this.state.showMenu}/>
-            </>
+            </AccountManagerStyle>
         )
     }
 }

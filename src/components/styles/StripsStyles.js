@@ -7,6 +7,10 @@ const StripContainer = styled.div`
     @media screen and (max-width: 1000px) {
         top: -75px;
     }
+
+    @media screen and (max-width: 700px) {
+        margin-top: 150px;
+    }  
 `;
 
 export default StripContainer;

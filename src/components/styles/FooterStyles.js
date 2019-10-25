@@ -15,6 +15,10 @@ const FooterStyle = styled.div`
         margin: 0;
         width: 100vw;
     }
+
+    @media screen and (max-width: 700px) {
+        display: none;        
+    }
 `;
 
 const Icons = styled.div`
@@ -82,5 +86,20 @@ const CC = styled.div`
     margin: 15px 0;
 `;
 
+const Signature = styled.span`
+    color: red;
+    padding-left: 10px;
+    font-weight: bold;
+`;
+
+const PhoneFooter = styled.div`
+    display: none;
+    text-align: center;
+
+    @media screen and (max-width: 700px) {
+        display: block;
+    }
+`;
+
 export default FooterStyle;
-export { Icons, Facebook, Instagram, Youtube, Links, ServiceCode, CC };
+export { Icons, Facebook, Instagram, Youtube, Links, ServiceCode, CC, Signature, PhoneFooter };

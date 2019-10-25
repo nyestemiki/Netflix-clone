@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import FooterStyle, { Icons, Facebook, Instagram, Youtube, Links, ServiceCode, CC } from './styles/FooterStyles';
+import FooterStyle, { Icons, Facebook, Instagram, Youtube, Links, ServiceCode, CC, Signature, PhoneFooter } from './styles/FooterStyles';
 
 export default class Footer extends Component {
     render() {
         return (
+            <>
             <FooterStyle>
                 <Icons>
                     <Facebook/>
@@ -26,8 +27,19 @@ export default class Footer extends Component {
                     <div>Contact Us</div>
                 </Links>
                 <ServiceCode>Service Code</ServiceCode>
-                <CC>© 1997-2019 Netflix, Inc. {"{i-0c4517dea3b7e884f}"} Nyeste Miki Edition :)</CC>
+                <CC>
+                    © 1997-2019 Netflix, Inc. {"{i-0c4517dea3b7e884f}"} 
+                    <Signature>Nyeste Miki Edition :)</Signature>
+                </CC>
             </FooterStyle>
+            <PhoneFooter>
+                <div>Terms of Use</div>
+                <div>Privacy Statement</div>
+                <div>Cookie Preferances</div>
+                <div>Help Center</div>
+                <CC><Signature>Nyeste Miki Edition :)</Signature></CC>
+            </PhoneFooter>
+            </>
         )
     }
 }

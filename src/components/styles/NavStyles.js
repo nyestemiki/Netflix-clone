@@ -29,6 +29,10 @@ const NavbarStyle = styled.div`
         left: -50px;
         background: ${props => props.scrolled ? '#141414' : 'transparent'};
     }
+
+    @media screen and (max-width: 700px) {
+        width: calc(100vw - 20px);
+    }
 `;
 
 const PrimaryNav = styled.div`
@@ -65,12 +69,20 @@ const NavLink = styled.div`
     &:hover {
         color: #b3b3b3;
     }
+
+    @media screen and (max-width: 700px) {
+        display: none;        
+    }    
 `;
 
 const NavItem = styled.div`
     margin: 8px 25px;
     cursor: pointer;
     color: white;  
+
+    @media screen and (max-width: 700px) {
+        display: none;        
+    }
 `;
 
 const AccountIcon = styled.div`
@@ -101,5 +113,11 @@ const AccountIcon = styled.div`
     }
 `;
 
+const AccountManagerStyle = styled.div`
+    @media screen and (max-width: 700px) {
+        display: none;        
+    }
+`;
+
 export default NavbarStyle;
-export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, AccountIcon };
+export { PrimaryNav, SecondaryNav, NavLink, NavItem, Logo, AccountIcon, AccountManagerStyle };

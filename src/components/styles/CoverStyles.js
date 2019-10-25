@@ -8,6 +8,10 @@ const CoverStyle = styled.div`
     @media screen and (max-width: 1000px) {
         height: 50vh;
     }
+
+    @media screen and (max-width: 700px) {
+        display: none;
+    }    
 `;
 
 const Trailer = styled.video`
