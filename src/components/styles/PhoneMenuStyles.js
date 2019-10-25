@@ -25,14 +25,15 @@ const Menu = styled.div`
     height: 100vh;
     left: -15px;
     padding: 0 15px;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.55);
     font-weight: bold;
+    font-size: 15px;
 `;
 
 const Top = styled.div`
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgba(255, 255, 255 , .7);
+    border-bottom: 1px solid rgba(255, 255, 255 , .55);
     position: relative;
     padding: 10px 0;
 `;
@@ -77,7 +78,7 @@ const Link = styled.div`
         display: ${props => props.active ? 'inline' : 'none'};;
         content: '';
         height: 100%;
-        border: 2px solid red;
+        border: 2px solid rgba(255, 0, 0, .75);
         height: 20px;
         left: 0px;
         position: absolute;

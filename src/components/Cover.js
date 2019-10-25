@@ -13,6 +13,9 @@ export default class Cover extends Component {
         document.getElementById('video').addEventListener('ended', () => {
             this.setState({ videoPlaying: false });
         });
+        if (window.innerWidth <= 700) {
+            this.mute();
+        }
     }
 
     rePlay = () => {

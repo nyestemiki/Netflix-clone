@@ -53,20 +53,20 @@ export default class PhoneMenu extends Component {
                     <MenuNav>
                         <Link active={true}>Home</Link>
                         <Link>My List</Link>
-                        <Link>Action</Link>
-                        <Link>Comedy</Link>
+                        <Link>Action Movies</Link>
+                        <Link>Comedy Movies</Link>
                         <Link>TV Shows</Link>
-                        <Link>Drama</Link>
-                        <Link>Horror</Link>
-                        <Link>Anime</Link>
+                        <Link>Drama Movies</Link>
+                        <Link>Horror Movies</Link>
+                        <Link>Anime Movies</Link>
                         <Link>British Movies</Link>
-                        <Link>Classical</Link>
-                        <Link>Competition</Link>
-                        <Link>Crime</Link>
+                        <Link>Classical Movies</Link>
+                        <Link>Competition Movies</Link>
+                        <Link>Crime Movies</Link>
                         <Link>Documenaties</Link>
-                        <Link>Reality</Link>
-                        <Link>Fantasy</Link>
-                        <Link>Musical</Link>
+                        <Link>Reality Movies</Link>
+                        <Link>Fantasy Movies</Link>
+                        <Link>Musical Movies</Link>
                         <Link>Kids Shows</Link>
                         <Link>Food And Travel</Link>
                     </MenuNav>

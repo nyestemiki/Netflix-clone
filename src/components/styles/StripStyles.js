@@ -84,6 +84,12 @@ const ItemStyle = styled.div`
         margin-right: ${props => props.isLastInStrip ? '160' : ''}px;
         margin-left: ${props => props.isFirstInStrip ? '160' : ''}px;
         margin: 0px ${props => !(props.isFirstInStrip || props.isLastInStrip) ? '80' : ''}px;
+
+        @media screen and (max-width: 700px) {
+            margin: 0;
+            translate: all .6s;
+            transform: scale(1);
+        }
     }
 `;
 
