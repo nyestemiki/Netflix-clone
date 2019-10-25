@@ -76,6 +76,11 @@ const ItemStyle = styled.div`
         height: 3px;
         z-index: 100;
         background: ${props => props.progress ? `linear-gradient(to right, red 0%, red ${props.progress}%, rgba(255, 255, 255, 0.3) ${props.progress}%, rgba(255, 255, 255, 0.3) 100%)` : 'none'};
+    
+        @media screen and (max-width: 700px) {
+            width: 70%;
+            left: 15%;
+        }
     }
 
     &:hover {

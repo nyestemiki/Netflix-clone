@@ -29,3 +29,11 @@ html, body {
 .glider-track {
     height: 70%;
 }
+
+.glider-prev {
+    display: none;
+}
+
+.glider-next {
+    display: none;
+}
